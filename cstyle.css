@@ -1,0 +1,100 @@
+/* Reset some default styles */
+body, h1, h2, ul, p, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Brush Script MT', cursive;
+    background-color: #f1e3e3;
+}
+
+header {
+    background-color: #e6c3c3;
+    color: #ab6363;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #e8dada;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.cart-review {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.cart-review h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cart-review ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-review li {
+    margin-bottom: 10px;
+}
+
+.cart-review img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.checkout-form {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.checkout-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+form {
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ab1d1d;
+    border-radius: 5px;
+}
+
+button {
+    background-color:  #935555;
+    color: #e1d1d1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:disabled {
+    background-color: #c6aeae;
+    cursor: not-allowed;
+}

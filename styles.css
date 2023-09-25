@@ -1,0 +1,90 @@
+body {
+    font-family: 'Brush Script MT', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #e6c3c3;
+    color: #350202;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.products {
+    width: 70%; /* Adjust the width as needed */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three products in each row */
+    grid-gap: 20px; /* Adjust the gap between products */
+    overflow-y: auto; /* Add scroll for products */
+    max-height: 623px; /* Adjust the max height as needed */
+}
+
+.product {
+    background-color: #f6e2e2;
+    border: 1px solid #be8080;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+}
+
+button.add-to-cart-btn {
+    background-color: #935555;
+    color: #e1d1d1;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart {
+    width: 25%; /* Adjust the width as needed */
+    background-color: #ede1e1;
+    padding: 10px;
+    border: 1px solid #7a3a3a;
+    border-radius: 5px;
+    text-align: left;
+    overflow-y: auto; /* Add scroll for cart */
+    max-height: 500px; /* Adjust the max height as needed */
+}
+
+.cart-scroll {
+    max-height: 350px; /* Adjust the max height as needed */
+    overflow-y: auto; /* Add scroll for cart items */
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#total {
+    font-weight: bold;
+}
+
+/* Style  links */
+a {
+    text-decoration: none; /* Remove underline */
+    color: #8b5050; /* Link text color */
+    font-weight: bold; /* Link text bold */
+    transition: color 0.2s; /* Smooth color transition on hover */
+}
+
+/* Style links on hover */
+a:hover {
+    color: #d19b9b; /* Change color on hover */
+}

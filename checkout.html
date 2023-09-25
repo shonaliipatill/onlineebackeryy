@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="cstyle.css"> <!-- Add your CSS stylesheets or links here -->
+    <style>
+        /* Add your custom CSS styles here */
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <div>
+        <h2>Cart Details</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically added here using JavaScript -->
+        </ul>
+        <p>Total Amount: <span id="total-amount">₹ 0.00</span></p>
+    </div>
+
+    <form id="checkout-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="address">Shipping Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+        <br>
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Bank Transfer</option>
+        </select>
+        <br>
+        <button type="submit">Place Order</button>
+    </form>
+
+    <!-- Optional: Add your JavaScript code to handle form submission and display cart details -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const checkoutForm = document.getElementById("checkout-form");
+            const cartItemsList = document.getElementById("cart-items");
+            const totalAmount = document.getElementById("total-amount");
+
+            // Sample cart data (you can replace this with your actual cart data)
+            const cart = [
+                { name: "Product 1", price: 10.00 },
+                { name: "Product 2", price: 15.00 },
+                { name: "Product 3", price: 20.00 },
+            ];
+
+            // Display cart items and calculate total amount
+            function displayCart() {
+                cartItemsList.innerHTML = "";
+                let total = 0;
+
+                cart.forEach(item => {
+                    const listItem = document.createElement("li");
+                    listItem.classList.add("cart-item");
+                    listItem.innerHTML = `
+                        <span>${item.name}</span>
+                        <span>₹ ${item.price.toFixed(2)}</span>
+                    `;
+                    cartItemsList.appendChild(listItem);
+                    total += item.price;
+                });
+
+                totalAmount.textContent = `₹ ${total.toFixed(2)}`;
+            }
+
+            // Add event listener for form submission (you can customize this part)
+            checkoutForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                // You can handle the form submission here, e.g., send the order to a server.
+                alert("Order placed successfully!"); // Replace with your actual logic.
+            });
+
+            // Display the initial cart details
+            displayCart();
+        });
+    </script>
+    
+    <script src="checkout.js"></script>
+</body>
+</html>
+
+ 
+
+
+
+
+   
+
+   
